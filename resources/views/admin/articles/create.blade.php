@@ -89,10 +89,7 @@
 
                     <div class="col-span-2">
                         <label for="editor-content" class="block text-sm font-medium text-gray-700 mb-1">文章内容</label>
-                        <div id="editor-container">
-                            <div id="toolbar-container" class="border border-gray-300 rounded-md p-2 mb-2"></div>
-                            <div id="editor-content" class="min-h-[300px] border border-gray-300 rounded-md p-4"></div>
-                        </div>
+                        <div id="editor-content" class="min-h-[300px] border border-gray-300 rounded-md"></div>
                     </div>
 
                     <div>
