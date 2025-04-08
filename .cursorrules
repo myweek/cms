@@ -1,0 +1,122 @@
+{
+    "rules": {
+        "php": {
+            "strict_types": true,
+            "naming": {
+                "classes": "^[A-Z][a-zA-Z]*$",
+                "interfaces": "^[A-Z][a-zA-Z]*Interface$",
+                "traits": "^[A-Z][a-zA-Z]*Trait$",
+                "abstract_classes": "^Abstract[A-Z][a-zA-Z]*$",
+                "methods": "^[a-z][a-zA-Z]*$",
+                "properties": "^[a-z][a-zA-Z]*$",
+                "constants": "^[A-Z][A-Z0-9_]*$",
+                "variables": "^[a-z][a-zA-Z]*$"
+            },
+            "max_line_length": 120,
+            "max_method_length": 20,
+            "max_class_length": 200,
+            "max_parameters": 5,
+            "complexity": {
+                "cyclomatic": 10,
+                "npath": 200
+            }
+        },
+        "laravel": {
+            "models": {
+                "table_naming": "snake_case",
+                "primary_key": "id",
+                "timestamps": true,
+                "soft_deletes": true,
+                "fillable_required": true,
+                "casts_required": true
+            },
+            "controllers": {
+                "suffix": "Controller",
+                "namespace": "App\\Http\\Controllers",
+                "base_class": "Controller",
+                "max_actions": 7
+            },
+            "routes": {
+                "naming_required": true,
+                "name_format": "^[a-z][a-z0-9\\.-]*$"
+            }
+        },
+        "documentation": {
+            "class_docblock": true,
+            "method_docblock": true,
+            "property_docblock": true,
+            "format": "phpdoc",
+            "required_tags": [
+                "@param",
+                "@return",
+                "@throws"
+            ]
+        },
+        "security": {
+            "sql_injection": true,
+            "xss": true,
+            "csrf": true,
+            "mass_assignment": true,
+            "file_permissions": true
+        },
+        "testing": {
+            "required": true,
+            "coverage": {
+                "minimum": 80,
+                "exclude": [
+                    "database/",
+                    "config/",
+                    "resources/views/"
+                ]
+            },
+            "naming": "^test[A-Z][a-zA-Z]*$"
+        },
+        "imports": {
+            "group_by_type": true,
+            "alphabetical": true,
+            "groups": [
+                "PHP",
+                "Laravel",
+                "App",
+                "Tests"
+            ]
+        },
+        "formatting": {
+            "indent_style": "space",
+            "indent_size": 4,
+            "line_ending": "LF",
+            "trim_trailing_whitespace": true,
+            "insert_final_newline": true
+        },
+        "git": {
+            "commit_message": {
+                "format": "^(feat|fix|docs|style|refactor|test|chore)(\\(.+\\))?: .+$",
+                "max_length": 72
+            },
+            "branch_naming": "^(feature|bugfix|hotfix|release)\\/[a-z0-9\\-]+$"
+        }
+    },
+    "warnings": {
+        "complexity": {
+            "cyclomatic": 7,
+            "npath": 150
+        },
+        "line_length": 100,
+        "todo_comments": true,
+        "debug_statements": true
+    },
+    "ignore": {
+        "paths": [
+            "vendor/**",
+            "node_modules/**",
+            "storage/**",
+            "bootstrap/cache/**",
+            "public/build/**"
+        ],
+        "files": [
+            "*.blade.php",
+            "*.min.js",
+            "*.min.css"
+        ]
+    }
+} 
